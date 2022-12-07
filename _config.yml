@@ -1,0 +1,13 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Testing this jekylly stuff" # the name of your site, e.g. ACME Corp.
+include: ['_pages']
+sass:
+  load_paths:
+    - _sass
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+twitter:
+  username: 
+  card: summary #keep this to generate a twitter share card
