@@ -4,6 +4,11 @@ title: "Home"
 description: "Some awesome description"
 ---
 
-<h1>Hello World</h1>
-<h1>{{ page.title }}</h1>
-<h2>{{ page.description }}</h2>
+<p>This is a site to collect my projects. I'm very much a "make educated guesses and see how it works" person, so I'm trying my best to capture not only the "correct" path that I took but any wrong turns and misunderstandings I've made on the way. I'll call out those areas in order to make them obvious, but I feel the sections are necessary to properly capture my learning style. It should also server to provide an example that not all projects start with knowing how to do it already, but can be successful through some determination, insight, and lucky guesses at times.</p>
+
+<h1>Recent Posts</h1>
+
+{% for post in site.posts limit: 3%}
+<b><a href="{{ post.url }}">{{ post.title }}</a></b>
+<p>{{ post.excerpt }}</p>
+{% endfor %}

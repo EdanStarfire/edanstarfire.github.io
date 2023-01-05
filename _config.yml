@@ -2,6 +2,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Testing this jekylly stuff" # the name of your site, e.g. ACME Corp.
 include: ['_pages']
+excerpt-separator: "<!--more-->"
 sass:
   load_paths:
     - _sass
@@ -11,3 +12,20 @@ plugins:
 twitter:
   username: 
   card: summary #keep this to generate a twitter share card
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  syntax_highlighter: rouge
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
